@@ -27,8 +27,12 @@ namespace DongJinInTem
         {
             var dayOfYear = DateTime.Now.DayOfYear;
             InitializeComponent();
-            _fileScan = new FileScan("*.DBF");
-            _fileScan.Notify += _fileScan_Notify;
+            if (!Properties.Settings.Default.OPC)
+            {
+                _fileScan = new FileScan(Properties.Settings.Default.FileExt);
+                _fileScan.Notify += _fileScan_Notify;
+            }
+
             Load += Form1_Load;
             _btnSave.Enabled = false;
             _btnRemove.Enabled = false;
@@ -43,12 +47,15 @@ namespace DongJinInTem
             printController.Start();
             Instance = this;
 
-            try
+            if (Properties.Settings.Default.OPC)
             {
-                //OPCReader.Instance.Notify += Instance_Notify;
-                //OPCReader.Instance.Start();
+                try
+                {
+                    OPCReader.Instance.Notify += Instance_Notify;
+                    OPCReader.Instance.Start();
+                }
+                catch { }
             }
-            catch { }
         }
 
         private void Instance_Notify()

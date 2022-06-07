@@ -34,5 +34,29 @@ namespace DongJinInTem.Properties {
                 this["WatchFolder"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OPC {
+            get {
+                return ((bool)(this["OPC"]));
+            }
+            set {
+                this["OPC"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("*.XLS")]
+        public string FileExt {
+            get {
+                return ((string)(this["FileExt"]));
+            }
+            set {
+                this["FileExt"] = value;
+            }
+        }
     }
 }

@@ -58,7 +58,7 @@ namespace DongJinInTem
 
         private void _server_Shutdown(object sender, OpcShutdownEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         private void _server_ConnectionStateChanged(object sender, OpcDaServerConnectionStateChangedEventArgs e)

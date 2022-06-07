@@ -16,20 +16,23 @@ namespace DongJinInTem
         [STAThread]
         static void Main()
         {
-            try
+            if (Properties.Settings.Default.OPC)
             {
-                Thread t = new Thread(new ThreadStart(() =>
+                try
                 {
-                    try
+                    Thread t = new Thread(new ThreadStart(() =>
                     {
-                        Bootstrap.Initialize();
-                    }
-                    catch { }
-                }));
-                t.ApartmentState = ApartmentState.MTA;
-                t.Start();
+                        try
+                        {
+                            Bootstrap.Initialize();
+                        }
+                        catch { }
+                    }));
+                    t.ApartmentState = ApartmentState.MTA;
+                    t.Start();
+                }
+                catch { }
             }
-            catch { }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
