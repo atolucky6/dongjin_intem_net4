@@ -1,0 +1,242 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\bin\Debug\DevExpress.XtraReports.v15.1.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>en-US</Localization>
+///   <Version>15.1</Version>
+///   <Resources>
+///     <Resource Name="XtraReportSerialization.XtraReport">
+/// zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFAg898HAAAAAA0BAABMcABpAGMAdAB1AHIAZQBCAG8AeAAxAC4ASQBtAGEAZwBlACYAUwB5AHMAdABlAG0ALgBEAHIAYQB3AGkAbgBnAC4ASQBtAGEAZwBlAAAAAAAgzgUAAEJNzgUAAAAAAAA+AAAAKAAAAHsAAABZAAAAAQABAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAP//////////////////////////4P///////////////////+D/////////
+/// ///////////g////////////////////4P///////////////////+D////////////////////g////////////////////4P///////////////////+D//////8AAAAAAAf/////g//////4AAAAAAAA/////4P/////4AAAAAAAAD////+D/////4AAAAAAAAAP////g/////4AAf/wD/wAA////4P////wAf//+Af//AB///+D////4Af///wD//8AP///g////8Af///8Af//wB///4P///+Af////AH//+AP//+D////AD////4A///gB///g////AAD////AH/+AAH//4P///gAAH///4A/8AAA//+D///wAAAf//+AP8AAAP//g///8AAAAf//wB4AAAB//4P//+AwAAAf/8APAABgP/+D///A/wAAAADwB4AH+B//g///gf+AAAAA8AeAH/gP/4P//4H/4AAAAHgDwH/8D
+/// /+D//8D//wAAAB4A+P//gf/g///A///gAAAPAHv//4H/4P//gf///+AAB4A////A/+D//4P/////AAPAH///4P/g//8D////////wB///+B/4P//B////////+AP///wf+D//gf////////wB///8H/g//4P////////+AP///g/4P/+D/////////wB///4P+D//g/////////8Af//+D/g//wf/////////gD///g/4P/8H/////////4A///8H+D//B//////////AD///B/g//wf/////////4A///wf4P/8H///gAAAAAAAH//8H+D/+B///gAAAAAAAB///B/g//gf//4AAAAAAAAf//wf4P/4H//8AAAAAAAAH//8H+D/+B///AAAAAAAAD///B/g//gf//wAAAAAAAA///wf4P/8H//8AAAAAAAAf//8H+D//B///gD//////////B/g//wf//4A//////////wf4P/8H///
+/// AH/////////8H+D//B///4A/////////+D/g//wP///AH/////////g/4P/+D///wB/////////4P+D//g///+AP////////+D/g//4H///wB/////////B/4P//B///+AP////////wf+D//wf///gD////////4H/g//8D///8AcAB/////+D/4P//g////gAAAAf////A/+D//8D///AAAAAAB///gf/g///A//+AAAAAAAD//4H/4P//4H/8AAAAAAAAH/8D/+D//+B/8AAAAAAAAAf/A//g///wP8AAAAAAAAAB/gf/4P//+BwAAAAP/+AAABgP/+D///wAAABwB///AAAIH//g///8AAAD8Af//8AAAB//4P///gAAH/gD///8AAA//+D///8AAP/8Af///wAAf//g////wA///gD////4Af//4P///+Af//8A/////AP//+D////gD///AP////AH///g////+AH//4B////A
+/// D///4P////wA//+Af///AB///+D/////gAD/4B//gAD////g/////8AAAAAAAAAB////4P/////wAAAAAAAAB////+D//////AAAAAAAAD/////g//////+AAAAAAAD/////4P///////8AAAAH//////+D////////////////////g////////////////////4P///////////////////+D////////////////////g////////////////////4P///////////////////+D////////////////////g////////////////////4P///////////////////+A=</Resource>
+///   </Resources>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.DetailBand detailBand1;
+        private DevExpress.XtraReports.UI.XRPanel panel1;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.XRLabel label8;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel label7;
+        private DevExpress.XtraReports.Parameters.Parameter TEST_NO;
+        private DevExpress.XtraReports.UI.XRLabel label6;
+        private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
+        private DevExpress.XtraReports.UI.XRLabel label3;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private System.Resources.ResourceManager _resources;
+        private string _resourceString;
+        public XtraReport() {
+            this._resourceString = DevExpress.XtraReports.Serialization.XRResourceManager.GetResourceFor("XtraReportSerialization.XtraReport");
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(this._resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator1 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
+            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.panel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.label7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.barCode1 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TEST_NO = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // topMarginBand1
+            // 
+            this.topMarginBand1.Dpi = 254F;
+            this.topMarginBand1.HeightF = 0F;
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // detailBand1
+            // 
+            this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.panel1});
+            this.detailBand1.Dpi = 254F;
+            this.detailBand1.HeightF = 254F;
+            this.detailBand1.Name = "detailBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            this.bottomMarginBand1.Dpi = 254F;
+            this.bottomMarginBand1.HeightF = 0F;
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label2,
+                        this.label1,
+                        this.label8,
+                        this.pictureBox1,
+                        this.label7,
+                        this.label6,
+                        this.label5,
+                        this.barCode1,
+                        this.label3});
+            this.panel1.Dpi = 254F;
+            this.panel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.panel1.Name = "panel1";
+            this.panel1.SizeF = new System.Drawing.SizeF(500F, 220F);
+            // 
+            // label2
+            // 
+            this.label2.Angle = 90F;
+            this.label2.Dpi = 254F;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(450.6F, 116.9711F);
+            this.label2.Name = "label2";
+            this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label2.SizeF = new System.Drawing.SizeF(35.78714F, 98.02895F);
+            this.label2.StylePriority.UseFont = false;
+            this.label2.StylePriority.UseTextAlignment = false;
+            this.label2.Text = "12.5 V";
+            this.label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.Angle = 90F;
+            this.label1.Dpi = 254F;
+            this.label1.Font = new System.Drawing.Font("Arial", 5F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(462.3F, 30.08118F);
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label1.SizeF = new System.Drawing.SizeF(20.70004F, 86F);
+            this.label1.StylePriority.UseFont = false;
+            this.label1.StylePriority.UseTextAlignment = false;
+            this.label1.Text = "VIET NAM";
+            this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.Dpi = 254F;
+            this.label8.Font = new System.Drawing.Font("Arial", 5F);
+            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(21.718F, 149.4F);
+            this.label8.Name = "label8";
+            this.label8.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label8.SizeF = new System.Drawing.SizeF(103.764F, 24.10001F);
+            this.label8.StylePriority.UseFont = false;
+            this.label8.StylePriority.UseTextAlignment = false;
+            this.label8.Text = "DONGJIN";
+            this.label8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dpi = 254F;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(34.5F, 89.7F);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.SizeF = new System.Drawing.SizeF(78.2F, 55.1F);
+            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // label7
+            // 
+            this.label7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.TEST_NO, "Text", "")});
+            this.label7.Dpi = 254F;
+            this.label7.Font = new System.Drawing.Font("Arial", 6F);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(340.4F, 52.30001F);
+            this.label7.Name = "label7";
+            this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label7.SizeF = new System.Drawing.SizeF(89.89954F, 24.09999F);
+            this.label7.StylePriority.UseFont = false;
+            // 
+            // label6
+            // 
+            this.label6.Dpi = 254F;
+            this.label6.Font = new System.Drawing.Font("Arial", 6F);
+            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(318.8F, 30F);
+            this.label6.Name = "label6";
+            this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label6.SizeF = new System.Drawing.SizeF(111.4996F, 24.1F);
+            this.label6.StylePriority.UseFont = false;
+            this.label6.Text = "21-330-M";
+            // 
+            // label5
+            // 
+            this.label5.Dpi = 254F;
+            this.label5.Font = new System.Drawing.Font("Arial", 6F);
+            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(37.3F, 42.7F);
+            this.label5.Name = "label5";
+            this.label5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label5.SizeF = new System.Drawing.SizeF(262.9F, 24.1F);
+            this.label5.StylePriority.UseFont = false;
+            this.label5.Text = "M159984   8023-M00-007";
+            // 
+            // barCode1
+            // 
+            this.barCode1.AutoModule = true;
+            this.barCode1.Dpi = 254F;
+            this.barCode1.LocationFloat = new DevExpress.Utils.PointFloat(138.2F, 85.9F);
+            this.barCode1.Module = 5.08F;
+            this.barCode1.Name = "barCode1";
+            this.barCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 254F);
+            this.barCode1.ShowText = false;
+            this.barCode1.SizeF = new System.Drawing.SizeF(294.6F, 94F);
+            this.barCode1.StylePriority.UsePadding = false;
+            code39Generator1.CalcCheckSum = false;
+            code39Generator1.WideNarrowRatio = 3F;
+            this.barCode1.Symbology = code39Generator1;
+            this.barCode1.Text = "M159984";
+            // 
+            // label3
+            // 
+            this.label3.Angle = 90F;
+            this.label3.Dpi = 254F;
+            this.label3.Font = new System.Drawing.Font("Arial", 5F);
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(436.9F, 41F);
+            this.label3.Name = "label3";
+            this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.label3.SizeF = new System.Drawing.SizeF(20.70001F, 64.16235F);
+            this.label3.StylePriority.UseFont = false;
+            this.label3.StylePriority.UseTextAlignment = false;
+            this.label3.Text = "Made in";
+            this.label3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TEST_NO
+            // 
+            this.TEST_NO.Description = "Parameter1";
+            this.TEST_NO.Name = "TEST_NO";
+            this.TEST_NO.ValueInfo = "0001";
+            // 
+            // XtraReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.topMarginBand1,
+                        this.detailBand1,
+                        this.bottomMarginBand1});
+            this.Dpi = 254F;
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Name = "XtraReport";
+            this.PageHeight = 2794;
+            this.PageWidth = 2159;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+                        this.TEST_NO});
+            this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
+            this.SnapGridSize = 1F;
+            this.SnapToGrid = false;
+            this.Version = "15.1";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
