@@ -18,7 +18,7 @@ namespace DongJinInTem
             try
             {
                 string str = "";
-                using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                using (FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     using (StreamReader reader = new StreamReader(stream))
                     {

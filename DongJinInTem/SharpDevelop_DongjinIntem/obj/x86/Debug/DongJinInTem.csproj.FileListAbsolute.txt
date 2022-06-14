@@ -1,0 +1,9 @@
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.csproj.AssemblyReference.cache
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.csproj.SuggestedBindingRedirects.cache
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.exe.config
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.Form1.resources
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.PageSizeForm.resources
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.PrintRibbonControllerResources.resources
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.Properties.Resources.resources
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.XRDesignRibbonControllerResources.resources
+D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\obj\x86\Debug\DongJinInTem.csproj.GenerateResource.cache

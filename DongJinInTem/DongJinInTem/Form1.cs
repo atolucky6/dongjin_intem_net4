@@ -18,9 +18,22 @@ namespace DongJinInTem
     {
         public static Form1 Instance { get; protected set; }
 
+        public static bool SaveProfile(string name, PrintProfile profile)
+        {
+            try
+            {
+                string fileName = TemplateFolder + "\\" + name + "\\Profile.json";
+                string json = JsonConvert.SerializeObject(profile);
+                File.WriteAllText(fileName, json);
+                return true;
+            }
+            catch { }
+            return false;
+        }
+
         readonly FileScan _fileScan;
         string AppDir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        string TemplateFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Template";
+        public static string TemplateFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\Template";
         PrintController printController = new PrintController();
         
         public Form1()
@@ -172,19 +185,19 @@ namespace DongJinInTem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //string watchDir = File.ReadAllText("watch.txt");
-            //_txbWatchFolder.Text = watchDir;
-            //if (Directory.Exists(watchDir))
-            //{
-            //    _fileScan.WatchDirectory = watchDir;
-            //    _fileScan.Start();
+            string watchDir = File.ReadAllText("watch.txt");
+            _txbWatchFolder.Text = watchDir;
+            if (Directory.Exists(watchDir))
+            {
+                _fileScan.WatchDirectory = watchDir;
+                _fileScan.Start();
 
-            //    _txbLog.Text += $"{Environment.NewLine}Bat Dau Theo Doi: {watchDir}";
-            //}
-            //else
-            //{
-            //    _txbLog.Text += $"{Environment.NewLine}Khong Tim Thay Thu Muc Log: {watchDir}";
-            //}
+                _txbLog.Text += $"{Environment.NewLine}Bat Dau Theo Doi: {watchDir}";
+            }
+            else
+            {
+                _txbLog.Text += $"{Environment.NewLine}Khong Tim Thay Thu Muc Log: {watchDir}";
+            }
         }
 
         private void _cobLabelType_DropDown(object sender, EventArgs e)

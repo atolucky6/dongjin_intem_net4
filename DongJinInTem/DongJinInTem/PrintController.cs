@@ -52,10 +52,11 @@ namespace DongJinInTem
                             foreach (var parameter in request.Profile.Parameters)
                             {
                                 if (parameter.Name == "TEST_NO")
-                                {
-                                    parameter.Value = request.TestResult.TEST_NO.Value.ToString(parameter.DisplayFormat);
+                                { 
+                                    parameter.Value = (int.Parse(parameter.Value) + 1).ToString(parameter.DisplayFormat);
                                 }
                             }
+                            Form1.SaveProfile(request.Name, request.Profile);
 
                             string reportFile = $"{_appDir}\\Template\\{request.Name}\\ReportTemplate.repx";
 

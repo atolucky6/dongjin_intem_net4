@@ -1,0 +1,312 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>D:\Work\Others\Github\dongjin_intem_net4\DongJinInTem\DongJinInTem\bin\Debug\DevExpress.XtraReports.v15.1.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>en-US</Localization>
+///   <Version>15.1</Version>
+///   <Resources>
+///     <Resource Name="XtraReportSerialization.XtraReport">
+/// zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFAg898HAAAAAA0BAABMcABpAGMAdAB1AHIAZQBCAG8AeAAxAC4ASQBtAGEAZwBlACYAUwB5AHMAdABlAG0ALgBEAHIAYQB3AGkAbgBnAC4ASQBtAGEAZwBlAAAAAAAgDnMAAEJNDnMAAAAAAAA2AAAAKAAAAGMAAABiAAAAAQAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wD/AP8AAP//////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////v///v3+//z+//7+//////////////3///v+//3+//3//v3//v3///3///7////+///+///+///+///+//////7///7///7//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///f///f//
+/// /f///f///P///P///f7//vz+//z///z///z+//z+//3+//3+///+///+/v/+/v/+///+//////7///7///7//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///v///P///P///P///f///P///P///P///f///f///f/+///+///+///+/////v///P///P///f///v/////+///+////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///v3///z///v///v///v///z///z//vz//v3//v///v///P///P///v///v///v///f///v///v////3///3///3///7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v7//vr+//r+//r+//z///z///v+/vr///n+//z+/////v7//P3//f7//v7//v///v/////////+//7///v///v///v///z///7//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////v7///r9//r9//v+/////////P39+vz+/vj7//v9/v///Pz+/vn+//v+//z///7+/v////////7+/v3+//z+//r+//r///v+//7+//////////////////7+/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v////3+//3+
+/// //7/////+///+f//+v/+/f39//3//v///f///v7//v3+/v7//v///f///v///v7//f///f7//f79+v79+f///f////////////7+/v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v///v///////////v///P//+/7++v///f///////////////////P///f/////////////////+///+/f///P//+v//+P//+///////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////v//+v//+////vv///z////++v/67v3w2/jr1PHjzPHjxvHixPDix/Xm0P7w3//87////f///////////////P//+f///P//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////wAAAP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+v//+v///vr///v//vXu4NW6ldSnatenY9CgXNCfXM+eXdCfXdSiYNuoad2ydty5g+DClOrRqfbkxvfw2Pr35v/+9P///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// //3///3///////////////////////7///3//////////////////////v///v///v////////7////////+/+zp/e/s/P////////////v///3//f377969jLVzHc2CHtWHHdGEI82CJtGFI9OFINGDGtGBGs+BHcSBIsGEMLeFQ7WLVMuneO/cuPr44P//8////v////7+//39/////v///v///v///v///v/////////////////////////+//7+///+/////////v///////////////////////////////////////////////////////////wAAAP/////////////////////////////////////////////////+///9///+//3//vv//vv////+///+/v/9///+//////z//vr//v3///z9/v3+/v7//v///P/+/f/+/v///////+vn/7Ws6Ip63FxJ4F1L09TI9//5
+/// ///9//7/+/z/+v3//v7359+2gcmJOtWIKNeKLNSKLc+LKNCLKNSLKdaKKtSKKc6MKcyKKcuHLMuGL8uKMsmOOMuYSdiqa+DIn//25v///////////P/++v39+f79+v///P/+/v/+/////////v////7+//z+//v+//3//////v///P///////////////////////////////////////////////////////////wAAAP/////////////////////////////////////////////////+///9///+//3//vz///z////+///+///9///+//////3//vv//vv9/fz9/v7+/v///////v///////+jf/b+y9Yp36U460C8ZxDUd3jAZ1XBd2dHD9f///////fz/+/r//////v/44duxeMJ9KtKIKdiMLNKLKdCKKdGKLNKKK9GJKNOLKtSJK9eJK9iKKdWKJ9KJJc2GJ7x7KL6EPtyw
+/// euvXsvzz3////P////z9/f39+/7//v/+/v/+//////////////z+//v+//v+//3//////v///v7///7//////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////z///3///3///7//v/////////+//7//v7//v/+///+///+//79/v78/P///f/////6/9XJ9J2N5VM91jkg2i8U4jYZ6Dge6TUg6TUf6jEW3E4706id6vLu//////z+/fr+/P7///766OvQo8SKPsqEJ9eLKdiKK9mKLdGLLNCMK9SLKdmILtmGL9aILtSLKdGJKtOJLdSLK9OJJ8mCIMaFL8aSTNWxguvYu///+/////z+/fz+//z//////////v///f3///z+//3///3///z///z///3///7/////////////////////
+/// /////////////////////////////////wAAAP////////////////////////////////////////////////7///v//fz//f7//f///f///v/+//////3//f3//f/9///9///9///7//75/v////Pt/se78GRO1zYczzAa4TMg5jUg6zcd6jgd6jId6zQd7Tkd6zMa3Tspyrqv8/r1//3+/vn9/v3+////////9967iMOLO9CHJ9yKKd+LLNKKLdCNLNCOJdeLJ9mHL9aHMNSLKNCMKtKLLdmOKNeKI9WKKNGIKcyEKMB7JcWOSO3buPz46f3/+fr+/ff+//7//v///P///P7//v7///3///3///v///r///7//////v///////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////z//v3//P//
+/// +////v/////+///+/////////f///f///v///////////9PG/3hj3zwk0TMd3TMe6DIb8DYc8jke7jkd7Dwe7zwf7jgd6zcd7jsg7jcb4UYrz5iF5P/////////9/v39//z/////9OvSpsV9JtWFJ9mKLNWLK9GMKc+PI8+PI9KKK9SJLdSLKdWMKdWKKtGJLdGLLdOMK9iNJ9mMItmMJM+HJr6EOMuiZ/7uyv//+f///////v7//fz///7//f//+////v7///z///z//////P///P///v///////////////////////////////////////////////wAAAP////////////////////////////////////////////////////////7//f///P///v7+///+///+///+///+/f7/+/7//f7+//n4/7637mBM2T8l3DUY6DQd7DMc7Dcb8DgZ8Toa7job7Twd7z0c7Tob7TQd7Tgd
+/// 7Twb7DsX4FE11qiY6u7m/f////z9/vr//v7///7669+vdcyJOtGHK9OKLNGLKM+NJc6NJ9CMK9KKKtOKKdeKKteILNGJMM2JLtCMKtSNJtaNItmNJdeLJ8+IK8aFM82ZUubMoPrz4f///P7///n9//3+/v7++///+////f///v7+/v///v///v///////////////////////////////////////////////////wAAAP/////////////////////////////////////////////////////+///9///+//7///3////+///+///9/v79/fr/+/7//vf2/7Wt9VBB0TEY2jgc6Dgb7zcc7zkc7j0b7jwb7Twb7job7jkc7T4a7zsa8DMd7Tcc7j0b7kEc7T8b4jcdxaqe7v////7//P//+//+///////34OG0fcR9J86IL8+JK9KKKNKKLNCJLNCJKdKMK9aJLteILdeJK9KLKc+N
+/// J86NJ9CMKNaLKNeKKdWJLdGIK8qCJMSDMdu0eP/+8f7///n8//v8/v39/f/++f//+v/+/f/9/f7+///+/////////////////////////////////////////////////////wAAAP/////////////////////////////////////////////////////9///8///+//3//v3//f/////9/v/8/f7+/v///+vm/5mK8jsozzgh4Dce6Dod7Dob7Dwc7Dwd7Doe6jod6zoc7Toc7Tob7jsb8Dsb8TYc7zIc8DMd7jod6z8c6zwZ5Ucz07y4+fr4/////v/+/f7+/P7/+f733+G0gseDNdCFKdWMLtmJK9yMLtWKLc+LK9OJKdiKKdiLJ9SLJ8+MKc6LK9GKLNaJK9eJLNWJLdOLK9GMKM+KKciGMc+gY/nnyP/////+//7+//39/f7+/v/+/f/+//r6//39///+////////////////
+/// /////////////////////////////////wAAAP/////////////////////////////////////////////////////+///+///+//3//v3//P///P/9/f79/v///+/r/5CA5Ukv2zQZ5Tgd6zsf6jwd6zsZ6zwc7Tkd6jcg6Dce6jgd7Doc7jsb8Dsc7jsc7jcb8TEc8S4e7jUf6jod7DsZ7zcb4VhK0ryy8v/5///9/v7+/Pv/+/7/+/7z4d2sccaBL9CIK9uLK92LLdeJLM6KKdSMJ9eMJteLJ9OKKdGKLNCJLdGJLdSKLNSKLNSKK9OLKtKLKtOLK9KJLMR9Jtmpav325f///f////z+//7+//78/v7+//z8//39///+/////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////v7/+////f/9
+/// ///+///+/v7/+vv9/f///9DI9WBF4jcY4DUX6Dka9joa8jsb6jwd6Twd7DcZ7jYc8DQf6zUf6Tgc7jsb8Dwa8Twd6zoe6jUc7zQc7zQd7TMf6zUe7Dga7T0b8TAU4UMt1I585Pjv//////r9//r+/f/////67e3PpsSCM8uFKdSKKNaKKtOLKtSLKNWLKNWKK9SJLdWJLdOKLdCKLM6LK8+MKtOLKdaKKdiJK9eKLdaLLNeLKM2DJc+WTe7Zt//////+/P7+/vz+//r9//7//////v///v///////////////////////////////////////////////wAAAP////////////////////////////////////////////////7//vz//P3//v/9///8///+/v7//fz9/9bN+Hxp4DMV1zYZ6jUb7Tgd8Dgb7Tgc7Dke7Dsg7jYb7Tcc7zgd7Tke6zkd6zkc7jkc7zod7Dkd7Dcc7Tkc
+/// 7Tsc7Doc7Toe7jQa7Tcc7zcc7jUb3kAoz6+f8fDn/v7+/vz+/P7/+/7////97923hsWNQc+JJ9aMKtOJKtKKK9KKKtOKLNWJLdeJLNaKK9SKKtOLKdOMKNSLKdaKKtWJK9SKLdKLLNOKKNWLKcF9JdCiZfvrz///9f3+/vn9//v+//7//P///P///v///////////////////////////////////////////////wAAAP////////////////////////////////////////////////7///v///z///78///8///+//////Pv/2dS2TYX0job6TYd6zMd6zgg6zYd6jcf8DYe7zQb6zYd7Dkd7jwb7jwb7Tsd6jke6zcd7jcd7Tcd7job7z0b7UEc7EIb7Twb7TYe8DEe7Tcg7Tgd7Dga6DsixZiG5f////////z///r+//z//////eDDkr9/JNCJJ9WKK9GKLM+KLNCKLNSKLNeK
+/// KtmKKtmKKdmKKdiLKNWLKNOLKtGKLNGJLNKKK9OMKtGKK86ILsOBLMeSTP/41v///vf9//3////++v///P7///3///3//////////v///v///v7///3//////////////////wAAAP////////////////////////////////////////////////////7//v7//v38/v76//z7//7//6ab7joh2Tkd5j0c8jkb7zYc7Toe6zgd7DQd7zQd7jUd7Tcd7TYd7Tgd7joc7jsd7Doc7jgb8Dce7TYc7Doa8jsZ8T0b7zwd7Dkd7DMc7DMd6zYe6Tgd6Tsd6Dcb30Uu0rux7/n1//3+//39/vz//v3///v25daubcaKMtCHKdSJKdSKKtCIK9OJK9eLKNiLJ9iMKdWKKtaLKdeLKNWLKdSKKtWKKtaLKNaLKNOKK8+JLs6ILMeEKtyxbPbuz/z///z//////v///v7+//r///v/////////
+/// +///+f7//fz///v+//3//////////////wAAAP////////////////////////////////////////////////////7//f7//v////39/v39/8nD8V1L1zQY5Dkd6j0d8Dwd8Dkd7joc7Dkc7jcb8Tgd7jsd7Toc7Tkd6zkd7Doc7Toe6zgd7Tcc7zcd7Tgc7TkY8Dwa8j0b8jcY7DEU6S0R5jAW4jYd2joh1zwj1Dsj1DMgwltRuriy5P/9///9/v3//vj9/v7///jsz9ascMV7J9SGJtiKKdOKK9GJKtaMLNWKJ9eMKNWKKdSLKdWLKtaLKdSKKtWKKdaKKdaLKNSKK9CKLdGKLNGKKcB+Kdm5hf///v3///7////+/v7+//z///3//////////P//+f7//f39//v9//3//v///v///////wAAAP////////////////////////////////////////////////7//v3+/f/+/f//
+/// /v38/9PM+0s10zYb2zwd6j0e6joc6Dod7Dkd7jkc7job7Tsb7T4c7D8c7Doc7jsd6z4c6z8b7Dod7DYe6zQg6TYd7Dgb7zsd7Tkb4jYb00w02WZP4X5p45eG77Ol9b2x9MW88srA8cnB8sG76M7I6/v3/v/9/v/9/vz+/vv++/////316OnDmcqKQMyEKtOKK9KKLNGILNOKLNSKKtWLKtOKLNGKLdKKK9SKKtKKK9GKLNWLKtWLKtKKLNKKK9GLLceGL8KHPOLAjf767v/////+/v///v//+////P/+/////v7//v7///7+//7+/////f///v///////wAAAP////////////////////////////////////////////////////7////+/P///eff+oNz4TIZ3Tgb6z4c7z8b7z0d7jgc6zYb6zkc7zkd7Doe6T0c7Dsc7TYd7Tcd7T8b7kMa7Twb7zcd7DUf6TMf6jMf6jIb2kYw
+/// 1mpaz6GW5dXP/vv5///////////////////////////////////////+/P/+/f/+/v/+/v7/////////+9awgsKFOcyHLdGJLdSLLdOJK9GIKtOKLNKKLdCKLdGKLNSKKtGKLNCKLdOKK9SKKtSKKtSKKtGJK8+KL8yGK72CNPHjxv///////v///v//+P//+//+//3///r///3///7////+/////f///v///////wAAAP/////////////////////////////////////////////////+//79/////////56N6jYfyzQd6zYc7Twc8D4Z8jwZ8Tod8Dsg7zgc6zke6zYf6Dgd7Tcc7jIf6jQd7j0a8T8a7zgc7zYc7jcb6zIX3z0m0JuO5tTO9/bw///7///+//3///z+//v7/v79/f//+f3/+fv/+/z+//79///9//39/P7/+/7/+//+/v79///+/f7//v757eTImr19LcuEK9GL
+/// LtWKLNiMLNSKK9GKLc6JLtCKLdWLKdSLKtCKLdCKLdGKK9WLKdWLKdOLKtSKKtaKJ8d/Iteud///+P///////////P///P/+//v+//r///3///7////+/////////v///v///wAAAP////////////////////////////////////////////////////78//36/9nT+WRO3TUZ4TMd7TQd7Tob7Twb8DwZ9Dsc8Tod7jsc7Tgd7DUd7Dgc7zcc7TMg5zMe7Toc8jsb7zcc7zUd5D0k2WpS3qiY6/Lw//////7//P/9///+/v7+/v79//79///9/////f7//Pr+/Pr9//v8//z8//z+/vv//Pz//P/+/v/+/v///vz//P///fv24N+7iMeNQs6IKtOLLNWKKdeLKdOKKtCKLdCKLNaLKdaLKdOKK9CKLdGKLNaLKdaLKdaLKdeLKNiMKNCFJsuSR/Tryv7++f7///7//v///f/+/v7+
+/// //v///3///3////+///+/////v///v///wAAAP/////////////////////////////////////////////////////+//fw/31z2Twk1zgZ7zYc7zUd7jce6jgd6zsa8Tob8Dkc7Twc7zgb7jYZ7zoa8Dwb7Dgg5DUe6Dgf8Tcd7jIY6z0p03Nn0+nk/f////////3///7//f/+///+///9///+/f///P///v/8///8///9//v9//r9//v+//v///r///n//vz//v///v///v7//f///P//+///+9q2g8iBI9CJK9OKK9eLKNeLJtaMLNKKLNeLKteLKdWLKdCKLdGKLNaLKdaKKteKKdiLJ9WKKdSKK8uHLdKrdfr14/////v+//39/f/9/P/+/f////3///3///3///7//////v///v///wAAAP///////////////////////////////////////////////////////8/F+T8s
+/// 0TYg4Tke7zka7zgc8DQe6jUf6Dkd7Toc7joc7Tkc6zkc7jsd9TsZ8D0a6j4h6Tgi6jEb7DQc4U460beq7/fw///8///+//////////7+///+///+/v/+/v/+/v/+/v/9///8//78//78///+//3///n+/vr//fz+/fz9/v38///+/v3///v///v//vz//vz+//334tmsbcyIMdSJJtSMLdiNKteLJtiMKdKKK9OLLNWLKdOKK9KKLNWKK9WKK9eKKdiLKNWKKNWLK9GJLLZ9M+rVr/////v8//z+/////P//+////P7///z///v+//3+/////////v///wAAAP////////////////////////////////////////////////////b0/56Q7S8V3zYf6Tce7Dwc7zoc8DUe6zUf6Tge6zod7Dsd7Dog6jgc6zob8zsb7z4d7T4f6zce6S8d2VpJ37uv7Prx/v////////////z///v/
+/// //n///r///v///z///r///r///b///T///b///z+/v/+/P///P3//f7//f/+/f/8/v/8//7+/v3//vr//vj+//f9//r9/v//+/fs0dinYsiAJNCKLdSLK9eKJdiLJ9KKLdKLLNWLKdSKKtSKK9SKLNSKLNWKK9aKKtaKKtSKKdGKLMF9J9q0ff/+8f7+//z+/////f//+f//+f7///z///v///7+/////////////wAAAP///////////////////////////////////////////////////7Co5kYxzzkX8zcc8Dcd6zsd7Dwc7jgc7TUe7Dcd7Dkd7Dod6zod5jsf6Dgd6jcd7Tgb7jkZ5TUb1ZWQ6ebl/P////3//+D6/K3d6KPZ6KDa653Y6pjY6ZTZ6I7X5YfS4Y7V55DP35XM2qHT39X09/L//v7//f3//fv//vz///79///+//3//P//+///+///+/3//vn8/vz9/v/+/f//
+/// //fy2daxeMiFLs+JL9OKLdeLKtSKKtSKKdaLKdSKKtSKK9SKLNSKLNSKLdSJLNaKKteMK9GKLNCGJMiMPd/Elf//+/z9//z///7++v//+v7+//3+//3////+//7///3///7//wAAAP////////////////////////////////////////////////79/4F13jEazD0b8jgc7jge7Dkc7Dsc6zoc7Dcd7TYc7jcd7jod7Dsc6jsc6jof7TUe6zcd6D0e1G1a2e3r///////+/eL6/5nc8Ueszj2q0z6o2j6l2Tql1jWm1DKl0S2ezECjzF6pxYm90bHS3tLy99v9/tr9/tf8/tP5/tP4/tn4/uj+//b//v///f///f7//f7//v3+/f39/P///f///f//+fntzcGOS8WEMtOKK9aLKtOIJ9eMKtaLKdOKK9KKLdSKLNWKK9WKLNKILNSKKtmOLNSLKtSKJ8SBKsygYv/97/3+//n+//3+
+/// /P//+//+//7+//7//v///v3+//v///3//wAAAP///////////////v///////////////v/+///+///+//////Hx+1ZE2Tcb4Dsb7Doe7TYc7Tod8Dsd7Dod6zgc7jUb8Tcc8Doc7j0c8Dka7joe8DYc5i8Vzot05ejg/v/////+/////7vp+Um14xCp2wio4Q2j6BGk6RKl6A6m5hKk4x6c2ly65Lz6/Nn//+j//6nd8XjF4Fax1FWw11Sw2FWz1mO92o/W7MPu/PD///b///r///7//f//+/3+/P3+/P//////+v//+ebNq8WMSdKHJtaMKtWLKtaKKNeKKdGKLNCKLdSKK9WLKdOLKdGLLdKLLNOIJ9eLJ9WKKcyFKsyNPfnu1P////b9//z+/f//+v////7//////v///fz+//v+//3//wAAAP////////////3//P///v///////v7//f/9///7///9/////8/O9UQr2jkZ6jkc
+/// 7Tcc7zcb8Dkb8Dkd7Tkd7DYc7TYb8Tgb8Dkb7Dkf6TYe6TYa6EYq24Rv4eXe/f/9///+///+/////7nq+UW25RKr4g6r5BOp5xWp5xWp5hSn4yuq3nvQ7cTy/MDz+oDS7E+43Tau3Cmp2x+k2x+l4B6m4yWr3iux3TK130m86XrQ8q/p9+T+//b//Pr//P3++v7+/f39/v7++///+/778d+3isiBJtOLKNKJKtWKK9aKKdGKLNCLLNKLKdKMKNCMJ8+MKs+LKtGKKtWMKtSIK9SIKsuELOjKqP75+Pr9//z9/P//+f///v7+//3///z//Pz//v3+///+/wAAAP////////////3//P///v///////v7//f/8///7///+/////62n5jgb2zka7zkc7Tcb7zcb7zgc7jke6zoe7Tgb7jcZ7zgb7zce7DIc5jUg5jQd04Nt4vDl///////////+///+/////7zr+Ua35xSp5BKs5hSt5Rer
+/// 5Rmo4Sus32nE5dj//9D6/Wi94Sik1Q6j3A2l4Q6m4w6p5wqq6Qut6xOy6Re06BW16Bu07Cuz41bF55rk9tb6//D///3//P7+/P/+//7//P/+/P////Xkx8OKOc+KKNGIKdKKLdOKKtSJLNSJLNKKK9KLKtKMKc+LKdCMKtCMKtOKKteIKtOKLMGDLN66lP318P////7++///+f/////+//3//fv/+v3//v/+///+/wAAAP////////////3//f///f///v////7////+///+/v///vfx/4x+3C8U3Dkc7zsd7Dkc7jcc7jUf6jgg5jod6Dwa7Twa7Tge7jEd6jEd7DEd1paG5+7l/f/////9/////v///f///v///sDs+Uq46Rys6RSu6Q+u4xeu5iOm3XLO6c/9/+v//3PC4Rea0Bmi2iCi2iei2Cik2iSp3xys3xSt3hSx4xa05xu27R+56x7A7CPA6zK76X7T9Mz1/vr////+///7
+/// /f7+/f3/+/7//P3+9cypar5+JdKKK9CLLc+LLNiILdyHLteJLdaJLdWJLdaKL9OIKdWMKdOLKtWJKL6AKcKeV/v23v//+v/+/f///v///f7+//7+/////P3/+v7//v///////wAAAP////////////3//////v///v/+//7///////7//f///dPI/WxV5TEV5Tcb8Dkc7Tgc7zcb7zUd7jgd6z0d6T0c6T4f7Dgd7zMd7DIY2nhm3+3p/f/+///+/f7+/P3//f7//f///f///sHt+E276CGu5Rqw6BSw5xqt4z+x3rnu+tr//5bM4l+01mvF44/X8ani9LTm9Lrp9K3j9o/X7mfK5EG74yiz5CG37SG87SLC6STE6yTC7EXD6n/X8NX5/vT8///9/vv//fn/+/7//P///+nYrcqXSs2EKNOLK9CLKtSJLdmILNuKKNaLKNKLKdeKL9mIK9yLKdCLKMGCKdOqavLnxf//9v///P/9/v/9
+/// //3+/vv///3////+/v3//v7//P///f///gAAAP////////////3//////v///v/+//z+//////3//v///6CS7EMk4TYY7zcc8DUc7jcb8Dcb8jga8jkb8Dod7Dse6zoc5zoc5j4j16OJ6PTn/v////3//v3/+vz/+f3+/v3+//3//v///7/v+E/C5SOy5B6x6R+y6Te35Yve9+z//8vp74rJ3MLv+PH///r///////////////////r//+3//8vw/I3X8ji54Sa/5ybD7CnF8CfJ9yfJ8zXJ7WjU6836/f///f7+/v7////+//z9////+ODFksmDLNSKJ9KMJ9OKLNSKK9OOJNCPJM+NJdeJK9yKLtmHK8eHMOC+hv724/////v8/v79///+/fz9/Pr///r///3+///9//3///7//f///f///wAAAP////////////3//////v///v/+//z///3+/v3///7//4p54jcW3Dka8jcd7DUe
+/// 6jcc7jga8Tkb8Tgc7zYc7Tke7Dgb40gu14Rw3/Xo/v/8//v//vr//fv/+/v/+/38/v78//3//////77v+VDD5yC14xu16iCv5lC95Lz2//H//+H19tH2+fP//P7+/f38///9//v///r///79//z9/v3+//v+/9v5/4La7kbI5yjE7SnG8ivI9ynN+C3P9T/P657t9/v//v/+///+//7+//79/////+/evMWFNtKJJ9SMJ9WKLNOKLM6OJ86PJc+NJdWKKtSILsh/Ldmqbv/44v///fz8//r8/v3+/v//+/z++/r//fz///79///9//3///7//////////wAAAP////////////3////////+///+//z//vz//v7///j7/3Vk4DUV3Dsc8jke6TYf4zkd6zkb7jgc7jYe6jUf7DYe5zEV0pSB5vbt///9//79/fj/9vj/+/n//fr9//36///9/////////77u/FHE7R255BW55yKx5m3H
+/// 6t7///f+//z///j///3/+f/9/f/8///8//7///z///////7//fz//P///v3//+f//4vh8i7E6SfJ8SrL8i7R9y3R9jDT9nPf9OT///v////9//n///3+//////v34sOPSsyGKNSNKdWIK9OILs+MLs+LKs+KJ8+LL8WEL8aQTPvq0f////z8//z9//r//P///f///v3//vv//f7//v/////+//z//v79///9///+/wAAAP////////////3//v/+///9///+//3//v3+//78/+/s/mdW1zMY2jgc7jke7D4g6zsd6Tkb6joe8DQd6zMc5EAs2JOH5ujj/f39//v9//j+/vf/+fv+/P3+//39//79///+/v/+/////8Hu+1PF7iK55Ru56yew6YXR8+7///r+/v/+/v/9/v/+/vr+//v+///+/v////7+///+//7//fz/+/v//vz///b//9T6/WPQ7zfJ8i/Q9jHS9jXV+DbX+VzY8rz5
+/// /O7////+/vn///3//f////767uG3fcyMN9KIKtaLK9aKLNaILNWKLdOMMLp8Kc6iZPvx1P//8//+//39///9/////+fl+Ork9f79//v9/P///v///v////z//f79///9///+/wAAAP////////////7//v/+///9///+//3//v3+//78/+jh+ltK0DUd2zYc7Dca7D8d7z0d6Twe6jkd7zQa6TYh1H9w4fDw//3//vz//vf+//b///v///79/v/9///+//7//f///f/9/////8Tv+1bI7Ca65x+67iix547Y9PT///v//f/+/v/7///9//b///b///7//v/+///9///8///+/f7//Pv+//r+//v//vf//53l+VPP9DbS+DTV9zjZ+Tvb+03Z9pHu/OD9/v///v3///7//f7+///99vbaqseNQNGGK9SKKdaKKNuKKtSILMN9Ks+gXfDfu/////7/+v///f///////+HY/ZmM1tDF6f/9
+/// //z//v/+/v/+/v///v7//v7////////+/wAAAP///////////////v/9///9/////v7//Pz//v/8/+LV9U86zjcf4Tcb8Doc8Twc7Tsc7Dsc6TYa4kQp17et7/T0/v///v///f/+/P3//P3+9/z88v/+/f/8/////////v/////+/////8by+1vM7CS/5hvB6im84Y3e8fL///v///7+//3+/////v3//vv///v///79///8///8///+//7+//v9//39///9/f3//9///5Pp9kHU6zfa8znd9zbf/Dvf/l7c+M74+////f/+/////v7+/////Pv528STT82GK9OJJ9SMKMyHJceKON61f//55////vv/+/f+/v39//34/8zC+VQ710Ajyci37P/+//3///z8//79/////P/+/v7//v7//f///gAAAP/////////////////9///9/////P7/+/3//v/8/93O80kxzjcc5Tka7zkd7jgg
+/// 7jUb7Doe6Tsg0oRx4P36//////7+/v7+/v78/P//9uzhzvPv3v///P/+/f7//P7//v7///7//////8bz+1zO7CbA5x7B7C695JLg8vX///z9//79/v7//P///v///v3///3///79///+/////P7+/vz+//z+//79//z9/+b4+uj//732/FXW6j3c8zrf9zff+zfd/lPZ+MP2/P///v/+/////v3+/////Pz85seYWsiFK9WJKNKLK8CDLtevdP/64/////3//vr/+/n9//76/8m/9mVW2jEX2jog2MOx6//9//3///r9//z+/////f/+/v3//vz//f7//gAAAP/////////////+///9///+/////P///f7//v77/9TD9EMszzcb6Dod7TYe6TMg7DAb5zQb1ZuG6vDm/v///v/+/v78/P///////fLTssKadPLs2P//+v//+/3/+f3//f7///7//////8Pz+1rP7irA7CTA8jC55Z3j
+/// 9Pr///39/////f//+v/+/v3///3////+///+//7//v7/+Pr//Pj///7//v///+z8/qjc5OP+/tv8/37k+knf9zzg+EDh/j7d/1Pb+bfz/fr////+/v/+/fv+//3//f7+6cufZsOCK9SKKcR/K+S8hv754v////z9//v+//7////8/9DD/1xI0S4W2DId7jMf1Lys5v/8///+//v///3////+/////v3//vz///3//wAAAP////////////7///7+///+///+///9/v7//Pr6/8u99UIs0Tcb5zcd7TQd6TMd40Qv1ol34O/l/v/9/v7/+/7//P/+//778uzat8aMScWSVfnz3v///v/9/v3//P3//v/+///+/v///sT0/V3R9SjC7yHF8jC/5JTg8fX///z9/v/+/f3///z///7//v///f///P///f///v3++vr+/ff+//78//v+/9P6/XrO48Dw+OH//6Dy/VXd9UDe+z7f/j3d/lPa
+/// +Lr0/fv///7+/v/9+/3+//7//f7+6s6laMSCK8F+KNaobP325P///P39//7//f/+/v///8q991pE1z8j3Dsd6jQc7zId1bip5P/8///9//7+/////////P7/9/3//f3////+/wAAAP////////////3///3//v7//v/+/v/8//7//Pj5/8i79EMt0jke6DUc7DMd5DIcz4Z34PPr/////////f3++/3//P///+zXtMSVVMB8Is6WTfr03f/////9//3+/vz////+///9/v///sX0/l/T9ifF8SDH8jHE63rU7uL///r++//9+f3//vz///7+///+/v/+/f///f/9/fv8/Pr+/vz+/v38//L9/7rz/lvE5qHj9eD//7z8/GDe8UHf+jre+zzd/FPb9rv1/Pv///7////+/f38/v7//v7/6s2lZ7t/LMeWVfbmxP////39//3//v///f/7//Dk/3Fe3i0S1Tsd7Dwb7TUb7zEc1Leq5P/9
+/// ///8///9////////+/3/9/7//f/+///+/wAAAP////////////3//vv//Pz//P///P/9/f3+/Pr5/8/D9EUuzjke4jUc5Tgj0pWH5+fk/f////z7///9/////////PHatcWPS8iELtKGJ8uVS/jz2f//+//9//z///v///7+///9/////8b2/WPV9CzI7iTI8y7C81jN8LX4//X//f//+f//+f/+/v/9///9///+///+///9/vr9//r7/v/9/f3+/en//4fX7UC854va9tP7/8v9/W/j7kLh8zff+Trg+1Hc8bj2+/r///7+/v/+/f/9///+/f386LOSW8GYVf/52v//+fz//vz+/Pz+/v///9zS/WBKzj0i3TYb7Tkd7Tod7TMb7jId07is5P/+///+///+/////v//+/3//f7+///+/////wAAAP////////////v//vv//vz//v/+/v/8/vz/+/v+/9jO9EYvyzgZ3UMp1oBx3uvq
+/// //z+//7//v78/v39///9+e3YusqTS82GLtmJLdaHJciRRPTv1P//+//+//z///v///7+///+/////8f2/WrY8jXL6C/L8C7F90HJ8oDf9Of8/////v//+/3+/vr+//v+//7//f3+/v79//37/v39/f7++/v//c36/lPJ6DC/6oHY9c35/tL//nfi8kPf9Tng+zrg+1Hc8rz2/Pz///7//f/+/P/+/////vj35sq0lOzcu///+P3+/fj9//3//f///8/G+Htq5DQb0jkd6TUb8TYb8Dgc7jQc7TUg07uv5//+/////v/+///+/v///P3//v7+///+/////wAAAP////////////z/+/v//Pz//v/+///9//3/+/3//+DV+E81zD0ezrqm8v34//////7///3++///+f//9tq1hcOGOs2GJNmKJ9yIKNiIJcSHN+7oxP//+/7+//z//vv//vz+//3+/////8n3/XDc8kDQ7DTO7y3L+C7M
+/// 9D/L6Jvs9uP////+///+//z//v3//v7//P3/+v3/+v7/+v7++/j//cf3/HHW8CjI8SXE7Yfe+M37/9D//nnh+Efa+zvf/Tze/Fre+sf3/v////z/+/7/+v///f/+/v38+P36+f////38/v3+/v////f1/7yx+FA31DQV2Tsd8zkd7jcc7zcb8DYb7zMZ7Dwm2Me77f//////+/7///7+///////+///+///+/////wAAAP////////////3//Pz//P3//v/+///9/v7//f7//+Tc92FOw39q2vbv//////37///9/v7++//97e/as8WHPMuDKNOLLNSKKtaKKNiLKMODL+3fsP//9/v9//z//vv//v3+//7+/////8n3/XHd9D3P7jLQ8yvP9yvP9TLO7lrX66Ht9ef9//P//////v///v///P//+f7/+PL/++b+/cv4/n7b9ELH7iXJ9CjH8Ive9c76/sn+/XLg9kfa/Drf/ELe+nDh
+/// /NT5/v////v/+/7/+////f7+///+///+//39//39/v3+//r6/7qx9VdC2D8d3z8b7D0d7zgd7Dod7Dsd7Tgc7zMX7kIr3NDF8f////7/+/z///7+///+///////+///+/////wAAAP/////////////+///+///+///+///8//7+//7+/+jn8rS14efo/////f///P/+//7//////fHYss6TTc6CJdWLLNSHLtGKK8+NKNWMKMmEK/DGjP/56vr+/////v7//v7+///+/////8z5/3Hf+DnO8i/R+CrR+CzR+DHQ+DrM8U/O64np+cj7/vr//////////v///v///t///632/WHW8z7I7zXL9izK8yvJ74/f89L6/sT9/Gre8kTe+zXi+kze9Jru/OX8///9/vr+/f7//v7///v9//3+///8/f/8+////vz//7ay+VNA1zIT20Ab7T8b7jwc7Tcc7Tsd6jwd6zkd7jMV8Eox4dzT9///
+/// //3/+/v///3+/////////v3///3//////wAAAP/////////////+///+///+///+/v/+//78//38//r6/vP4/ff+/v3/+v7+/f/+///+8O/ar8eQSM2GL9iIK9WILtSILtCLKs6OJtKLJ8+IK9OcWPTp1f7////+/f7//v7+///+/////8z5/3Hf+jzR9jHU+C3W9THV9DTU9jTT9TrT8kjT7GnY75bk9qHo+KDp96Hp9Zzo9Xrd81jT7zjN8TTO8zHO9C3N8jLM7ars99v//6n4/Fre8z7g+DTg+mPe9cr4/fL////+//n9/v3+/v7+/v39/f3++f/9+//8/v///7+89EI20Dgf3jwb8Doc7jcd7TYd7Tcc7Tsd6jwe6zgc7TQT71Y84uvm/f////3//fv///3//v///f///v3//v3//v///wAAAP///////////////////////////v/////9///9//7+//v//Pr/+/3//f7+////
+/// /OzYsMqZTMuFJtSJK9aILtaILtSKLNGMKNCMJtKLKdOKK8KDNu3Zuv///////v7///7+/v/+/v///875/3Th+z7T9zXW+DPY9DbY8zXY9DDY9DPX9DnX8zzS80DL8kHO9DzR8jrR8jnP8jbO8jXP9DLO9DTQ9jLR9i/Q80PQ7cL1+dn//4fs/Uje9zvh+T3d+4Lj9+3+//r///3///r+/vv+/P79/f7+/f//9f/9+//1/9jM+G1d2ywW3zgb7Twc8jUd7jEe7TAe7Tcd7Tsd6jse6zke7TIT6GJK3vn2/v////3///v///3//v//+////v7//v3//v///wAAAP/////////////////////+///+///+//78/f/+/v////7+/v/+/v///////O/Xs8iRRcmFJNGJKdOILNSKLdSLKtaLJ9aLKNWKK9KKLNOKKcV/J+G9jP//+////P7+/////v///v///9D5/3nl+z7V+TbX/DvX+TzW
+/// +DfX+DHX+TDZ9zHX9jXV+jjU/zHT+SrY9CzV+y/S/S/S+zHT+DfT+zfQ+TTO+TjO9mjY79v//8j7/V/e+Dne/T7d+1XV9a7u/P////3//v3///3///z/+//+/P///v///v///9nM/E850Dkd2ToY7zoa8TYb7zAd7jAd7jEe7TUf6jsd6Tsd6zoe7TEV3HFd3f/////////+//r///3//v///P///////v7//v///wAAAP////////////7///7//v7+/v7+//39/f79/v/+///////9/v/+//347erTrsaQSc6ILdiKJ9OKK9GKLNCLK9GMKdaLKNeKKteJLdGJLNOKKs6EJ9GhXf3z1f7//P3//////v7//v/+/9D6/33o+kLZ9zfa+jrb+DvZ+TrY+zXY/DPa+zPb+TbX+jjU/DbX+jTa9TbZ+jfW/DTW+DPX+DLW+DXV+DnV+knP8Zbn99b//53w+Eva9zrd/0zb+4vj+dX6/v7/
+/// /f7//v7+/v3+/v3/+////P77//35/7as8mRT3Tkh2zoc6Twa8jsb8Doc7jcd7TYd7TUd7TQe7Dkc7Tob7jkd7DQc0JGA6P////////////r///z//////v/+//3///3//////wAAAP////////////3//v3//Pz//Pv//Pz//Pz7/v38/////////////Ni4ibmCN8yEJtmIKd2JKdmMKdGNKM2LKdKKK9aJLNeJLNaJK9GMLdGLKdiMKsmHM9exev//+f7///z///3//////9D7/4Hr+Efe9Dvf9zbg9jrf9zzd+jzc/Dnd+zbf+zre/DXZ/Dba+zzc+Dzb9zvb9jjb9DPc+C/a+jHb9kDY8Hvm+cr+/6Xx91/f80DX+knY/HDe+tX9//X///v/+/39/P////z9/P7+/P////3z/6ic70Mx0SwV3zYf6Dce6zMZ8Dkc7z4d7UEd6T8c6zkc7jcb8jka8TgZ8zga7jYjv7Wq6P/////+
+/// /v///vv///3////+///+//3///z///3//wAAAP////////////7///3//v3//vz//v7//f7+/v7+/f///f///+7k1sKMRcmFK9OKKtmKKNqJJ9mMKNWLKdKLKtKKK9SKLNaKKtWLKdKPJ9KMJ9iJLM+FLcaMRvbqzv///fv///79/////tD6/37q+kfe9jzf+zjf/Drg+zvg+z3f+jvg+jjg+zjg/jXe/Tje+j3f+D3e+jvc+Dvd9Drd+TXX/UHX92ne8rr5/cH8/nLi9krd+UTc+Xrh97rx++////n//v7+/f7+/v/+/v3+/f///vHq/a+g7Us21jkg4Dgd7DYd6Tcd7DUa8Dcc7joe6jwf5jwe6Tsc7jkb8Dka8DgZ9DgZ7GFR0dHL8f/////+//7///3//////f//+//9/v3+//z///3//wAAAP////////////////3///3///3////////+/v///P///P///+3fzMWFM9OIJtOK
+/// K9eLJ9eKJtWKKdWKKtSKKtSKKtSKKtSKKtSLKdONJ9WNKteHLNaHK8aAKuC+hvz66Pz+///8/P/+/dD7/3zo/Efe+D7g/Tvf/zzg/jzh/D/h+j/h+zzg+zrf/Tfg/Trg+z3g+jvg/Djf+jve9jvd+UHZ+mnb9afx/NT//5nw+Eva9kze+mbf8L74+/P///n//vn//f39/v79/v79/P7//v/9/6OU60s10TIW3jkc7jkc7Tcd7Dcc7jcb8Dcc7jcd6zkf5zoe6jsb7jkc7jkc7Tkb8TYY45iM6/Du///////+//3///7//////P//+P/9/v3+//z//v3//wAAAP////////////////3///3///3///7+/v7+///+/v/9+/////z46s6XTcuFKdCJLNaKKNWJKNCJLdGKLtWKK9aLKdaLKdOKK9KKK9CKLdOILdiHLNWLK9CMJsSFMd/Dl////////P/+/tX6/4fp+0zc8kDf9j3d+T7d
+/// +kDd+kPc+kXc+kbc+UTc+UHd+UHd+UDd+Trg+Dvh+Ebd+Uzc9Gzj87v6/dH//5bp8l/d8EvZ8n/m9c/5+vT///z//vj/+vT9+/f9/vv7/P///////8S48kIr0jcb4Tob7jod7Tkd7Dcd7Tcd7Tcd7Tgc7zkb7zkd7Dkc7jka8Tgc7zYe6zgd5UAl2srD9f///////v7+//z9//z+//7//////v/+//3///z///3//wAAAP////////////////3///3///3///3+/v7+/////v/+/f///v/+9tetcL9+KtSKK9WKKdSJLM2IMM+JL9WKKtaLKdaLKdOKK9KKLNKKLtGILNSKK9OMKdOMJsiDJcqbVfz45v/////9/+X9/6vx+mbc8VTf9VDd+FHd+VPc+lXc+lfc+ljd+Ffd91be91Te91Le91Hg9lnh9Hzi9Z/s+cT3/Mb5+6bs9XHb72ve8pjt+Mv4/fb//////////fv+/Pj9/fr9
+/// /v///v/+/8C08mlV3TQa4Tcc7Dsb7zsd7Tkd7Dgc7Tgc7Tgd7Dgb7zkb8Dkb7zka8Tka8Tcc7jYe7DQc1lhF0efl/f7//f///P79/vz+//z+//7//////f///v3///z///3//wAAAP////////////////3///3///3///z///3///3+/vz8/f7+/////+fWtMSOSdSIJNSJKtKKMM6JL86JLtWKKteKKNSKKtKKK9KLKtKJKdOLKtCMKs+MKs6KKNKLK8iDJtWwdvbu2/////r+/+v//834/sH3/sD3/773/733/7z3/7z3/733/7/4/r/4/r34/rv4/r/4/sn6/uP9/fj//v///t33+cP1+r32/874//X///////39//3+//3+/////////v///+Xc/It+5D8q1zEZ3jgd8Doe8Toe6zgd6jgd7Dkc7Toc7Toc7Doc7Toc7jkc7zga7zcb7jgd6zQZ6Uc21aCZ4v7+//3+/v/+/v7/
+/// //v///v///3//f//+////v7+//3+///+/wAAAP////////////////3///3///3///3///3///z+/vz8/P7+//7///r04924gc2EJtOJKtKJK9KKLNCJLNWKKteKKNSKK9OKK9SLKdWKKNWLKtCKKs+MK86KKdOKLNWJKcOHONy4hf/87//+/P3//Pr///r///r///n//vj//vX///X///X///f///j///j///j///n///n+//r+/v3++///+/n//vT///X///r9//79/v///vr9//r+//z+//79//36/+Tb+4t55Tch1TYg5Tcg6Tod7Dsd7jge6zcd6zcd7Tkd7Doc7Tsb7jsd6zoe6jkc7Tcb7Tcb7Tod6zIY4G1f3eHf+/3+///9///9//3+//r//vr///3//f//+v///f/+//7+///+/wAAAP////////////////3///3///3///3///3///3///3///7///////////Liv8OF
+/// Nc+GKNiLJ9eLKdWLKtWLKdaLKdSKKtSKKtWKKtiJLNeJLNOKK8+MKdGMKNmKKdmJK9GFKciGNO3HmP/+6////P3////9/v/+/f/++////P/+/f/+/f7+/v39/v/7///8///8///8///8/////v3//P3//f/+/vz9/vn//v3+/f/++/7//fv9/f7////+/////9zW/VhA0TUc1zgc6Dgd6zoe6Tsd6Tod6jQc8DYb8Tcc7zkd7Doc7Tsb7zoe6jgf5zgc7Tkd7zcZ7zob6jIdzaCY7P////7////9///8//7+//v///v///3//f//+f///P/+///+///+/wAAAP////////////////7///7///7///7///7///7///7///7///////////756Mmha82HMdyMJdeKKNWKKdSKK9WLKtaLKNWLKdSKK9aHLteILNSLKNWMKNaMJ9uKKNmJLNiJLdGILcCFOOjMmv//7vz//Pr+/vv+/vz+
+/// /f7//f7+/P///v7+/v39//z8//79///8//z9/v3+/////v3+/fr//f3//v7///r9/f3+/fz++/z//P/////////4/8S68WdX2DUc3zgd6jgb6zsd6zsd6zod6jge7Dcb8Tca8Tgc7jod6zoc7Tsb7zoe6jkf6Dgc7Dgb7T0a8j0c5WBS1NTS+P///////f/+/v/9//79//z///z+//7//v///P///P///v/+/////wAAAP////////////////////////////////////////////////////7+/v//+urcvdGWSdSFIdWKK9aLLNOKLNSKK9iLJtaLKNKJLNSILtWJLNSMJ9eLJ9mKKNiJKtiJLtSILtGJLciEJMiTR+rSpP//8vv++/n///n///v+//79/f///f///f7+//r9//z+///+/vr+/Pz//f///////vz//Pr//P3//v/9///9/vz9/fz9/f/+/+/n/8Cz8VlC1jge2zUd
+/// 6zcc7Dkc6zod7Tod7Tgd7Dgd7Toa8Tob7zkd7Dsd6zsc7Dsc7Tod6zke6zcb6zkb6z0a7Ego3LWv9fT1///+////+///+//9//79//3+//3+//7//////////P///P///////wAAAP////////////////////////////////////////////////////7+/v3+/v//+uC4frt6JM6ILdGJK9KKLNOKK9iLJ9WLKdGKLNGLKtOLKdSLKdSLKdWKKtWILdSILs6JLs2KLdOMKcuDKsB/NvLTpf//7P7///j9//f9//z+/v///f//+vz+/Pj9/vj9/Pr++f3//v3//////////v7//Pz//v3//f///v////////fu/8Cv+2ZR1j8nzzwg4Tse6D0f7Tke6zgd7zUa8zUb8Dge6jod6jwc7Dwc7Toc7Tsc7Tsd7Dsd7Dkc7Tce7Tge7Tod5zgY2HBY2/b1/v7////9////+///+P7//v7+
+/// ///+///////////+/////v///P///v///wAAAP////////////////////////////////////////////////////7+/v39/v///fLkxMueX8eFLdCJLdKKLNOKK9aLKdSLKtKKLNOKKtWLKdaLKdSLKdKLKtKJLNCJLNGLK9GLKNKLKtWJLNGFLciLRObJmP//9fz//vf9//3+/v/+/P//+v3+/fr9//v+/////v7////////////9//z9//v9//n5/+vo/9DM96GY7Hlo30842Tkg3zYc6Doe7Tsd6z0e6zod6zcc7jUa8zUb8Tge6joe6Twc7Dsb7Tob7jsb7zsc7Tod7Dgc7TYc7jce7Dkf4kAozbKm7P7+//7//f/+/////v7//P3//f7//v///////v///v/+/////////v///v///wAAAP///////////////////////////v///v///v///v///v///v///v7+/v///P//
+/// +/////3w0seMQMaDK9GKLdGKLNKKLNOKKtWKKtiJLNeJLNaLKdaLKNOLKc6LKs+LKtaMJtmLJdGLKNGKK9aKLtODJcWBL+7Opf//8/7//////v///P/7+v/7/vb1/9vW8uHX/ffw//n0/+3j/9rS/763+JeO33doz19E1Esp2zIV4S0W5S8Y6DIZ7zQa8jcc8Dkd6zke6Toe6zkc7jkc7zkc7zkd6zke6zoc7job8Dob8Dsb7zsc7Tgd7DUc7jQb7zYc50Ap1qCR8PT0/////f/+/f///v79//39//3//f7//P///P///P///P///v/+/////////v///wAAAP///////////////////////////////////////////////////v7+/f//+/7++////v/+8t/CkcSNRM2HLNGKLdGKLdSKKtWKKNSKK9SKLNWLKdaLKNWLKdKKK9CKLNWLKtiLKNSLKM+KLM6JMNKJLcyFLMiNSOXE
+/// n//89P//9///+/77/P/7/vz7/7655W9h0WlY1XBc3GpS4WJL41ZB30Yy1Tsj1DcY3Twb5Tsc7Dgd6zge6zgc7jgb7zkc7Tke6zke6jkd7Dkb7Tgd7Tgd7Dcd6zcd7Dcc7joc7zwb7jsb7Dod7DYe7TQd7jUb7TYb2nVk3+vl//v7/v7//P///f///v/+//7+//7//v///v///v///v///v///////////////////wAAAP///////////////////////////////////////////////////v/++////Pr8+/3+/f//+///8Ni3g8J/KdOLLNWJKdaLK9SLKdKLKdOLKdSKKtOKKtOKK9OKLNOJLdWKKtaLKdSLKc+KLM2KLs+KLdSMK8aBJMCGQvDNp///7P///P/9//77/v///ujp/5GG8i8Zzy0P3jAP7TIS7TEV5zQZ6Tca7jgZ8zgc7zob7jod7Tke6jod6zsc7Dsd7Dod7Dkd
+/// 7Dkc7Tkc7Tcd7Dcd6zcd6zcd7Tcc7jsd7j0c7ToZ7Tkd7jUg7jYc7TQY4VpD1ci98f////7+/fz+/f7//////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////v//+/3//fn+//v9/P/+/f//+/ny2saQTMiAJd2LI9iNKtKLLtWKJ9iLJ9SKK9CKLc+JLtKKLNaKKdiKJ9eKKNSKKtSKKdaLKNiLJ9WMJtCQJs6MKb6CMefIm//97v/////+/vz/+fv/+/n5/5eJ8UUt4DMV7TYc7jYg6Tgc7jwc8Tsb7jkc7Tcb8Dgb8Toc7Toe6jke6zkc7Tkc7Tkb7zkb7zkb7zkd7Tkd7Dkd6zkd7Dkd7Dsd7Dob6zYZ9DQc8jQe5jYa30ow0dDH9v37//7+/v3+/vr7/v39///+////////////////
+/// /////////////////////////////////wAAAP///////////////////////////////////////////////////v///Pz+/vn///v+/f79/v///f//+urOpcuVT8+FKNWLKtKJK9aLJ9eLKNKKLNCKLdGJLdWLKdeKKNeKKdSKKtOKK9aLKNmLJtuLJdiLJdKMJtSMKcyGKsqPSefFmf/98P//+/7/+f7++//+/+zm/5iL8Tkd4TUa6TIc6TYc7zoc7zsd6joe6jcd7jgc7zsc7Tod7Dgd7Tgc7Tgc7Tkc7zoa8Toa8joa8job7zkc7Tkd6zke6zcc6jcc7DMb7jMe6zQd2lY+1ayb7fj1///+//////z+/fz8/v38/v/+/////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////3+/fv+/vf8
+/// //r9//z+/v38+////v///+nUsLZ+NcmEKdWKKdiLKNWLKtKKLNKKLNWKKdeLJ9aLKNOJLdGJLdKKLNaLKdiLJtiKJtuLKtiKLdOILdWLMMyBJ8CCN+3Nnv//7f/////+/v/7//////j0/3Nd5TEX0jIY6jYc8TYc7Dkf6Tkf6Dke6jkc7Tkc7jgb7zcb8Dcc7jgc7jkc7jsa8Dsa8jsa8jsa8Dkc7jkd7Dke6jYd7DQc7zUf7zUd4Dghv6qb6f////38/P39/f3+//z+/v/9/v/+/////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////7///v+/vv+/vr9/vv9//7//v/+/P/+/v3///368ezauMubWseFMNKJKtOKK9OKK9OKK9WKKtSKKdOKK9CJLs+JLtKJLdSKK9WLKdWILNaJL9SHLdKJ
+/// LtGKLtGILdCILsaFNuG+jf/98////f/+/v/9/P/+/eHd+5SG6z8m2jcf4zYe6zce6zke6jsc7Dob7zkb8Dgc7jcc7Tcc7zgb8Dkc7zsc7Tsd6jkf6Tkd6zgc7Tgc7jcc7zYc8TUc7zUY5Vc+28C08fLt/v///v3+/Pv+/Pv//f3//P/+/v/+/v///////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////3///3///3///3///3///7////+/v7+/v////////nqydOkacB6I9CIKc2HLdCKL9SLLtOJKNSLLNCLL82HLNKKL9aMLdaLKtKILtGJL9OLKdSLKdOLKdGLK9OJLNCEKsOBM/DPpf//7v//+v/++v/9+/////j1/6GU8UQt1TIY4TYe7Tcd7zga8Dkc7zke6jkf5zkf5zke6jkc7Tkc
+/// 7Tkd7Dge6Dsi6zkf6jcc7Tcc8DYa8TcZ8TYX5Ecywb6z7v///////////vv+//r///v//////f///P///f///v///////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////v///v7///////7///7////+/f///f/+/fz9/f//9fvu0t21e8aKPc2HK9GJKtOJK9KKLNOJKtSKKdWKKtSKLNOJK9WLLNGKLNCLK9OMKNeLKNiLJ9SLKdGKK9KKLtCHL8KHQePBlP/97v//+/7+/f3+//37/vXv/52P7Uky1TIY4jUb7TYe7zkf7Dof6Tke6Doe6jkd6zkd7Tkc7Tgd6zgf6jgd6jkd6zkd7Doe7DYa5z0j125Z3NHI8vfy/v/+//3+/vn9+/r+//z9//39///+/v///f///v///v//////////////
+/// /////////////////////////////////wAAAP///////////////////////////////////////////////////////v///v///////////////v/++////P7//vv+/v3//////f/96Nu5hcqGMNGJKdKHJ82JLNGIKdmLJtmKJdSJKNOKLNSLLtCKKtGMKdWLKdqKKdyKKNaLKdKLKs+KLdOLLsuDJcaKQ+rJpf/98/7//v7////+/v///+zn/pyO7Tsh1zYc5DQe6zcf6Toc6jsc7Tsc7jkb7zkc7jkc7Tcd6zge6zod7Dsb7D0e5z0g3zsh1ntr3NTN8v/////+//77//r9/vf9+/v///38///8///+/v7///7//////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// /v///////v//+////fz+/vr9//////v+//v+////+///7erNpMWQTsR+J9SJJtaLKtGLLNGJK9qOLNaKKtGIK9GKLdOKKtuKKduJKteJLNWLKdSMK9GIK9SLKNCMIMmJJrx+MOvNov//8f/////9/v///v////r3/6OY8Ucv2jMV7Tkd8Tsa7zsb7Dsc7jkb8Dgc7zcd7Dkd7Dga7jwY9DwV7joX0FdAy7Wr8PLv//////7+/v7//vz+//r+/fv+/P7////////+/v//+v3//v3+///+/////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////3///7//////P///f///f7//fz9/vz+//z+/v///f3+/fz///7+/P//+//88+3cvdixecuPP8aDLc+JL9KKLdeKKdeKKtKJLNGKLdOKLNiLJ9aK
+/// KdKKLNKKLNOKLNWIKdiMKNCMIdGNJs2IJ8SNRuLClv/++P/9/fv9/f7+//////Lv/56O8Tcd3zYZ6jsb7Dwc7Dsc7Tkc7Tgc7Tcd7jkd7joc6zUX3Ukt24566Me88/j3//z9//7+/v7+/v3+/v79//79/f7+/f///v///v///f7//P3//v7+///+/////////////////////////////////////////////////wAAAP////////////////////////////////////////////////7///v///3//////P//+v///fv9//f9//3+/////f/++f///P3+/vr+//z///7///////////Tr0+LDjMKALMZ/JM+HK9OJK9WLK9SKLNKKLNCMJ9CMJ9CMKdCJLtKJLtWJKtiLJ9eKJ9aKKtOLLNCFJcR+KufKoP//8f3////+/v///f/////+/5+T9Egx3DMY2jwe6Tsd7Dod6zgc6DMY
+/// 5TEW2Tok0I1/5c3J8////////////v///f7//Pr8//z8///9///8/v/8/////v7///v+//3+/////////////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////3///7//////f///f///v3+//z+//7//////v///P///v7///7//f7//v7//vz///3////////66OfNoNWscsyUTMuIM8+GKNSJKtSLK9OMKtKMKtGLKdGJLNOJLNWLK9aLKdSJKdOLKtGKLNeKL9CELMiRRuPGl//88/7/+/3//v////////Lu/6GU7Ukv2Dsd5Toc6zUX5EAk4FhA14Rx4bWq7evn//7+//7///7//v///v///f///f39//7+///////+///+//////////z///7+////////////////////////////
+/// /////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////v///f///v3///v///z//////////v//7/vhudOobsWOR8OBLceBJ86HK8+IK9KIKNaLKdiMKdiMKdWKKNGKKNGLKtGLLNaJMNqJL8yDIMCEOO7Qp///7f7//fz+//79/P///fbz/6WT+T8nyjgfzUgy031o5NvP/vz0/////////////v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// //////////////////////////////////7///v+//r+//7//////v////7///3///3+/f///P//+P/98frx3OTSrOG/hsmTTL6CM799J8mDJ86FKM+FJs+HKNCJK86JLMyIK9GJK9WJK9WGKsyFLLaBNt7Dl//67vz9//z9/vz+/fv9//X1/72257Sq4t3Y/vP0/vz++//9/f/8/v/9///+/////P7//Pz+//3+///+/////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////////////////////////////////////////////////7///n+//n+//3//////v///f///f7//f3+//7+/////v///v///v///P/95u3au9/I
+/// odu3iNCncMiZW8SQS8eOQ8mMPcmMO8eLOcmONMuOM8+LOs2MOr2HOrmTYN/Mtv///v7+//7+/v3+//r+/////////////////P//9///+//+/v/+///+/v///P7//fv+//3+///+/////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////////////////////////////////////////////////7///r+//r+//z//////v///P///f////7+///+/v/9/P///P//+//9/P////////////////7/9vr66fn32vnrwvnXpvLLl+vDjufEheTEguzEjvTMlvrcpvbiu/Xt2v/8/f78/v/9/v79/vr6+/79+/79/P///v/+/f//
+/// /v/+/f/+/f///v///v7///3///3+//7+///+/////////////////////////////////////////////////////////////////////////////////////////////////wAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7///z+//r9//v+//7+/v///P//+/7+/vz+//7+/////v///v///v///v///P//+P/+9P/88P777/z77vz67v368P/78P/+8f//9f///f/8//78/v/9/f/+/v/+/v79/v39//37//78//79//79//7+/v7//v7//v7+///+///+///+///+////////////////////////////////////////////////////////////////
+/// /////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////v///v////7///3+//v+//r+//v+//z+//3+//v+//z//////////P//+f//+f//+////v////3///v///z///z///7//////////////v/////+///+//3//v3//P7//P///P/+//3+//v///v///v//Pv//Pv//Pv//fz///7+///+///+/////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////v///v///v///v///v7//v3//v3+//z+//3+//3//v///v///////f7//P7//P///P///P///f7//vz///v+//v///3////9///+/f7//P7//v7///3///r//vn//fv//f///f////7///3///3//v3//P3//P3//P3///3+//7+///+/////v///v///////////////////////////////////////////////////////////////////////////////////////////////////wAAAP/////////////////////////////////////////////////////////////////////////////////////////////////////+/////////////v///v///f///P///P///P///v///v///v///P///P////3/
+/// //r+//v+//3///7//v///f///P///f7///z//vz////9///+/v3//vr///r///v///j//vb///r////////+///+///+///+/////////v///v/////+///+////////+////P///////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////v///v/////////+//3///3///7//v///v///////////v3//vz///3///3///7///z///v///v+//3//////f///P//+//+/v/9///+/////f7//Pr//fv///z///3+//v+//r+//3////+///+/////v///f//
+/// /f///v/+///9///9///+/////v//+////P///////////////////////////////////////////////////////////////////////////////////////////////////wAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////v///v////7///7///3///3///7///7///////////7///z///z///7//////////v////7///z///z///3///7//v///P/+///9/////v//+///+/3//f3///7////+/v7+//7+//3///7+//7+//7//v7//P///P///v/+///9///9/////////v///f///v//////////////////////////////////////////////////////////////////
+/// /////////////////////////////////wAAAP////////////////////////////////////////////////////////////////////////////////////////////////////////////3///3///3///7//////////v///v///v///////////f///f////////7///////////////////3///3///z///z///z///z//f7/+////P/+//79//z/////+////P////3///v+//r+//v///v//v3//v/////////+///////////+///+///+/////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////
+/// //////////////////////////////////////////////7///7///7//////////////////////////////////f///f////////7///////////////////////////7///z///z///z//v7//f/////+///+//7//////f///f////////z///z///z///z///7////////////////////////////+///+/////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAP//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wAAAA==</Resource>
+///   </Resources>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+        private DevExpress.XtraReports.UI.DetailBand detailBand1;
+        private DevExpress.XtraReports.UI.XRPanel panel1;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.XRLabel label8;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel label7;
+        private DevExpress.XtraReports.Parameters.Parameter TEST_NO;
+        private DevExpress.XtraReports.UI.XRLabel label6;
+        private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
+        private DevExpress.XtraReports.UI.XRLabel label3;
+        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private System.Resources.ResourceManager _resources;
+        private string _resourceString;
+        public XtraReport() {
+            this._resourceString = DevExpress.XtraReports.Serialization.XRResourceManager.GetResourceFor("XtraReportSerialization.XtraReport");
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(this._resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator1 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
+            this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.panel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.label7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.label5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.barCode1 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.label3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TEST_NO = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // topMarginBand1
+            // 
+            this.topMarginBand1.HeightF = 0F;
+            this.topMarginBand1.Name = "topMarginBand1";
+            // 
+            // detailBand1
+            // 
+            this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.panel1});
+            this.detailBand1.HeightF = 100F;
+            this.detailBand1.Name = "detailBand1";
+            // 
+            // bottomMarginBand1
+            // 
+            this.bottomMarginBand1.HeightF = 0F;
+            this.bottomMarginBand1.Name = "bottomMarginBand1";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+                        this.label2,
+                        this.label1,
+                        this.label8,
+                        this.pictureBox1,
+                        this.label7,
+                        this.label6,
+                        this.label5,
+                        this.barCode1,
+                        this.label3});
+            this.panel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.panel1.Name = "panel1";
+            this.panel1.SizeF = new System.Drawing.SizeF(196.9F, 90.2F);
+            // 
+            // label2
+            // 
+            this.label2.Angle = 90F;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F);
+            this.label2.LocationFloat = new DevExpress.Utils.PointFloat(171F, 36.9F);
+            this.label2.Name = "label2";
+            this.label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label2.SizeF = new System.Drawing.SizeF(14.6F, 37F);
+            this.label2.StylePriority.UseFont = false;
+            this.label2.StylePriority.UsePadding = false;
+            this.label2.StylePriority.UseTextAlignment = false;
+            this.label2.Text = "12.0 V";
+            this.label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.Angle = 90F;
+            this.label1.Font = new System.Drawing.Font("Arial", 5F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(179.7F, 1F);
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label1.SizeF = new System.Drawing.SizeF(8.1F, 34F);
+            this.label1.StylePriority.UseFont = false;
+            this.label1.StylePriority.UsePadding = false;
+            this.label1.StylePriority.UseTextAlignment = false;
+            this.label1.Text = "VIET NAM";
+            this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Arial", 5F);
+            this.label8.LocationFloat = new DevExpress.Utils.PointFloat(9.4F, 54.7F);
+            this.label8.Name = "label8";
+            this.label8.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label8.SizeF = new System.Drawing.SizeF(32F, 7.8F);
+            this.label8.StylePriority.UseFont = false;
+            this.label8.StylePriority.UsePadding = false;
+            this.label8.StylePriority.UseTextAlignment = false;
+            this.label8.Text = "DONGJIN";
+            this.label8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(9.9F, 29.3F);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.SizeF = new System.Drawing.SizeF(26.4F, 22.8F);
+            this.pictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // label7
+            // 
+            this.label7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.TEST_NO, "Text", "")});
+            this.label7.Font = new System.Drawing.Font("Arial", 6F);
+            this.label7.LocationFloat = new DevExpress.Utils.PointFloat(131.1F, 14.2F);
+            this.label7.Name = "label7";
+            this.label7.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label7.SizeF = new System.Drawing.SizeF(38.49998F, 9.499994F);
+            this.label7.StylePriority.UseFont = false;
+            this.label7.StylePriority.UsePadding = false;
+            this.label7.StylePriority.UseTextAlignment = false;
+            this.label7.Text = "0001";
+            this.label7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.label7.WordWrap = false;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Arial", 6F);
+            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(131.1F, 2.2F);
+            this.label6.Name = "label6";
+            this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label6.SizeF = new System.Drawing.SizeF(38.5F, 9.5F);
+            this.label6.StylePriority.UseFont = false;
+            this.label6.StylePriority.UsePadding = false;
+            this.label6.Text = "22-152-M";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Arial", 6F);
+            this.label5.LocationFloat = new DevExpress.Utils.PointFloat(11.6F, 8.5F);
+            this.label5.Name = "label5";
+            this.label5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label5.SizeF = new System.Drawing.SizeF(116F, 9.5F);
+            this.label5.StylePriority.UseFont = false;
+            this.label5.StylePriority.UsePadding = false;
+            this.label5.Text = "T528143          8056-M00-000";
+            // 
+            // barCode1
+            // 
+            this.barCode1.AutoModule = true;
+            this.barCode1.LocationFloat = new DevExpress.Utils.PointFloat(47.2F, 28.9F);
+            this.barCode1.Name = "barCode1";
+            this.barCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.barCode1.ShowText = false;
+            this.barCode1.SizeF = new System.Drawing.SizeF(110F, 37F);
+            this.barCode1.StylePriority.UsePadding = false;
+            code39Generator1.CalcCheckSum = false;
+            code39Generator1.WideNarrowRatio = 3F;
+            this.barCode1.Symbology = code39Generator1;
+            this.barCode1.Text = "T528143";
+            // 
+            // label3
+            // 
+            this.label3.Angle = 90F;
+            this.label3.Font = new System.Drawing.Font("Arial", 5F);
+            this.label3.LocationFloat = new DevExpress.Utils.PointFloat(170.4F, 5.5F);
+            this.label3.Name = "label3";
+            this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.label3.SizeF = new System.Drawing.SizeF(8.1F, 25F);
+            this.label3.StylePriority.UseFont = false;
+            this.label3.StylePriority.UsePadding = false;
+            this.label3.StylePriority.UseTextAlignment = false;
+            this.label3.Text = "Made in";
+            this.label3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // TEST_NO
+            // 
+            this.TEST_NO.Description = "Parameter1";
+            this.TEST_NO.Name = "TEST_NO";
+            this.TEST_NO.ValueInfo = "0001";
+            // 
+            // XtraReport
+            // 
+            this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+                        this.topMarginBand1,
+                        this.detailBand1,
+                        this.bottomMarginBand1});
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Name = "XtraReport";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+                        this.TEST_NO});
+            this.SnapGridSize = 0.3937008F;
+            this.SnapToGrid = false;
+            this.Version = "15.1";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}
